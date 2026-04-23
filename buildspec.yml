@@ -13,7 +13,7 @@ phases:
     commands:
       - echo Building the Docker image...
       - docker build -t test-ecs-containertest-app .
-      - docker tag container-test-app:latest ${ECR_REPOSITORY}:latest
+      - docker tag test-ecs-containertest-app:latest ${ECR_REPOSITORY}:latest
   post_build:
     commands:
       - echo Pushing the Docker image...
